@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import WarningSign from "./components/WarningSign";
+import MyBadge from "./components/MyBadge";
+import "bootstrap/dist/css/bootstrap.min.css";
+import SingleBook from "./components/SingleBook";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <WarningSign text="This is some random text" />
+      <MyBadge text="This is the badge text" color="success" />
+      {/* <SingleBook
+        book={{
+          asin: "0316438960",
+          title: "The Last Wish: Introducing the Witcher",
+          img:
+            "https://images-na.ssl-images-amazon.com/images/I/51eHtkVLL5L.jpg",
+          price: 9.59,
+          category: "fantasy",
+        }}
+      /> */}
     </div>
   );
 }
